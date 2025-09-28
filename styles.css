@@ -41,8 +41,25 @@ body {
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 30px;
     margin-bottom: 40px;
+}
+
+.log-panel {
+    grid-column: 1 / -1;
+    background: rgba(0, 0, 0, 0.3);
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    padding: 20px;
+}
+
+.printer-output {
+    color: #ffa500;
+    line-height: 1.6;
 }
 
 .panel {
@@ -95,20 +112,11 @@ select:hover {
 }
 
 button {
-    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-    color: #1a1a1a;
+    background: #333;
+    color: #e0e0e0;
     font-weight: 600;
     cursor: pointer;
     border: none;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-}
-
-button:active {
-    transform: translateY(0);
 }
 
 .orders-list {
@@ -149,12 +157,12 @@ button:active {
 }
 
 .clear-btn {
-    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    background: #555;
     color: white;
 }
 
 .print-btn {
-    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    background: #555;
     color: white;
 }
 

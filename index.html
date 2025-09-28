@@ -1,10 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Factory</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-$END$
+<div class="container">
+    <div class="header">
+        <h1>COFFEE FACTORY</h1>
+    </div>
+
+
+    <div class="main-grid">
+        <div class="panel">
+            <h2>Create Coffee Order</h2>
+            <div class="coffee-controls">
+                <div class="control-group">
+                    <select id="coffeeType">
+                        <option value="espresso">Espresso</option>
+                        <option value="latte">Latte</option>
+                        <option value="cappuccino">Cappuccino</option>
+                        <option value="americano">Americano</option>
+                    </select>
+                    <select id="coffeeSize">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>
+                        <input type="checkbox" id="addMilk"> Add Milk
+                    </label>
+                    <label>
+                        <input type="checkbox" id="addCinnamon"> Add Cinnamon
+                    </label>
+                </div>
+                <button onclick="createCoffee()">Create Coffee</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Current Orders</h2>
+            <div class="orders-list" id="ordersList">
+                <p style="color: #888; text-align: center;">No orders yet</p>
+            </div>
+        </div>
+
+        <div class="panel log-panel">
+            <h2>Printer Output</h2>
+            <div class="printer-output" id="printerOutput">
+                <p style="color: #888; text-align: center;">No tickets printed yet</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls-bottom">
+        <button class="print-btn" onclick="printOrders()">Print All Orders</button>
+        <button class="clear-btn" onclick="clearOrders()">Clear Orders</button>
+    </div>
+</div>
+
+<script src="js/coffeeModule.js"></script>
+<script src="js/decorators.js"></script>
+<script src="js/adapters.js"></script>
+<script src="js/factories.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
